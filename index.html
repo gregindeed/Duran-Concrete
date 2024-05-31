@@ -88,6 +88,16 @@
             line-height: 1.6;
             padding-left: 20px;
         }
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .portfolio img {
+            width: calc(33.333% - 10px);
+            height: auto;
+        }
         footer {
             text-align: center;
             padding: 10px 0;
@@ -127,6 +137,7 @@
         <nav>
             <a href="#about">About Us</a>
             <a href="#services">Our Services</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact Us</a>
         </nav>
         <main>
@@ -151,6 +162,15 @@
                 <li>Concrete Removal</li>
                 <li>Hauling</li>
             </ul>
+            <h2 id="portfolio">Portfolio</h2>
+            <div class="portfolio">
+                <img src="portfolio1.jpg" alt="Project 1">
+                <img src="portfolio2.jpg" alt="Project 2">
+                <img src="portfolio3.jpg" alt="Project 3">
+                <img src="portfolio4.jpg" alt="Project 4">
+                <img src="portfolio5.jpg" alt="Project 5">
+                <img src="portfolio6.jpg" alt="Project 6">
+            </div>
             <h2 id="contact">Contact Us</h2>
             <p>For more information or to schedule a consultation, please contact us at:</p>
             <p><strong>Phone:</strong> 619-972-4876</p>
@@ -164,24 +184,6 @@
                 </a>
             </div>
         </footer>
-    </div>
-    <!-- Embed Google Reviews Badge -->
-    <div style="text-align:center; margin-top: 20px;">
-        <script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
-        <div class="g-partnersbadge" data-size="large"></div>
-        <script>
-            function renderBadge() {
-                gapi.load('ratingbadge', function() {
-                    gapi.ratingbadge.render(
-                        document.querySelector('.g-partnersbadge'), {
-                            "location": "https://www.google.com/search?q=Duran+%26+Sons+Concrete+Co.+San+Diego#lrd=0x80d9530db10d78b1:0x62b0c65de466fc5c,1",
-                            "rating": 4.5,
-                            "style": "medium"
-                        }
-                    );
-                });
-            }
-        </script>
     </div>
 </body>
 </html>
