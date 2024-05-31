@@ -47,6 +47,12 @@
             margin-left: 10px;
             max-height: 30px;
         }
+        .stars {
+            display: inline-block;
+            font-size: 18px;
+            color: gold;
+            margin-left: 5px;
+        }
         header {
             text-align: center;
             background-color: #fff;
@@ -107,7 +113,7 @@
             <div class="social-media">
                 <a href="https://www.google.com/search?q=Duran+%26+Sons+Concrete+Co.+San+Diego#lrd=0x80d9530db10d78b1:0x62b0c65de466fc5c,1" target="_blank">
                     Google Reviews
-                    <img src="google-rating-stars.jpg" alt="Google Rating Stars">
+                    <span class="stars">★★★★★</span> <!-- Placeholder for stars -->
                 </a>
                 <a href="https://www.instagram.com/duran_and_sons_concrete/" target="_blank">
                     <img src="instagram-logo.png" alt="Instagram Logo">
@@ -115,7 +121,7 @@
             </div>
         </div>
         <header>
-            <img src="img_2448.jpg" alt="Duran & Sons Concrete Co.">
+            <img src="header-image.jpg" alt="Duran & Sons Concrete Co.">
             <h1>Duran & Sons Concrete Co.</h1>
         </header>
         <nav>
@@ -158,6 +164,24 @@
                 </a>
             </div>
         </footer>
+    </div>
+    <!-- Embed Google Reviews Badge -->
+    <div style="text-align:center; margin-top: 20px;">
+        <script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
+        <div class="g-partnersbadge" data-size="large"></div>
+        <script>
+            function renderBadge() {
+                gapi.load('ratingbadge', function() {
+                    gapi.ratingbadge.render(
+                        document.querySelector('.g-partnersbadge'), {
+                            "location": "https://www.google.com/search?q=Duran+%26+Sons+Concrete+Co.+San+Diego#lrd=0x80d9530db10d78b1:0x62b0c65de466fc5c,1",
+                            "rating": 4.5,
+                            "style": "medium"
+                        }
+                    );
+                });
+            }
+        </script>
     </div>
 </body>
 </html>
